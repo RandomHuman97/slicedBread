@@ -14,12 +14,12 @@ chmod +x prusa-slicer.AppImage
 
 
 
-cat > EDITME.py <<- "EOF"
+cat > sudo tee EDITME.py <<- "EOF"
 EXPORT_PATH = '/home/$USER/printer_data/gcodes'
 EOF
 
 
-cat > /etc/systemd/system/slicedBread.service <<- "EOF"
+cat > sudo tee /etc/systemd/system/slicedBread.service <<- "EOF"
 [Unit]
 Description=Slicer Web App
 After=network.target
@@ -38,7 +38,7 @@ WantedBy=multi-user.target
 
 EOF
 
-echo sudo systemctl enable slicedBread
-echo sudo systemctl start slicedBread
+sudo systemctl enable slicedBread
+sudo systemctl start slicedBread
 
 echo "The default config is for the Ender 3 V3 SE with PLA, you can export a new config from PrusaSlicer and replace the config.ini file (configs/config.ini)"
