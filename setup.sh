@@ -26,7 +26,7 @@ After=network.target
 [Service]
 WorkingDirectory=$PWD
 Environment=$PWD/venv/bin
-ExecStart=$PWD/venv/bin/gunicorn -w 1 -b app:server
+ExecStart=$PWD/venv/bin/gunicorn -w 1 -b 0.0.0.0:5050 'server:app'
 ExecReload=/bin/kill -s HUP $MAINPID
 KillMode=mixed
 TimeoutStopSec=5
