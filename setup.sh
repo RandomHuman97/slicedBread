@@ -14,12 +14,11 @@ chmod +x prusa-slicer.AppImage
 
 
 
-cat > sudo tee EDITME.py <<- "EOF"
+cat > EDITME.py <<- "EOF"
 EXPORT_PATH = '/home/$USER/printer_data/gcodes'
 EOF
 
-
-cat > sudo tee /etc/systemd/system/slicedBread.service <<- "EOF"
+cat << EOF | sudo tee /etc/systemd/system/slicedBread.service
 [Unit]
 Description=Slicer Web App
 After=network.target
