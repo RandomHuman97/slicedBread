@@ -2,10 +2,7 @@ from flask import Flask, render_template, request
 import os
 from werkzeug.utils import secure_filename
 import slicer
-
-# CHANGE ME TO YOUR GCODE PATH
-EXPORT_PATH = 'CHANGE ME TO YOUR GCODE PATH'
-# ex: EXPORT_PATH = '/home/username/printer_data/gcodes'
+from EDITME import EXPORT_PATH
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'tmp'

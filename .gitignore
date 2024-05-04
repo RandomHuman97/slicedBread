@@ -3,3 +3,4 @@ exports
 prusa-slicer.AppImage
 .venv
 .idea
+EDITME.py
