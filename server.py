@@ -15,6 +15,8 @@ def main():
 def upload_file():
     if request.method == 'POST':
         f = request.files['file']
+        if f.filename == '':
+            return render_template("error.html")
         if f.filename.split('.')[-1] != 'stl':
             return render_template("error.html")
         file_secure_name = secure_filename(f.filename)

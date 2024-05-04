@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>slicedBread</title>
@@ -19,14 +20,11 @@
         <form method="POST" action="/upload" enctype="multipart/form-data" class="pure-form pure-form-stacked">
             <fieldset>
                 <legend><i>Upload an .stl file to slice.</i></legend>
-                <div class="upload-btn-wrapper">
-                    <button class="pure-button">Choose a file</button>
-            <input type="file"
-                   name="file" class="pure-file">
-                </div>
+                <input type="file"
+                   name="file">
                 <br>
                 <br>
-            <button type="submit" class="pure-button pure-button-primary" >Slice!</button>
+                <button type="submit" class="pure-button pure-button-primary" >Slice!</button>
             </fieldset>
         </form>
     </div>
