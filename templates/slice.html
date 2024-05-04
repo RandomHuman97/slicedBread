@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>slicedBread</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="pure-g">
+        <div  class="pure-u-1 center">
+        <h1>slicedBread</h1>
+        </div>
+        <br>
+    <div class="pure-u-1-1 center">
+        <form method="POST" action="/upload" enctype="multipart/form-data" class="pure-form pure-form-stacked">
+            <fieldset>
+                <legend><i>Upload an .stl file to slice.</i></legend>
+                <div class="upload-btn-wrapper">
+                    <button class="pure-button">Choose a file</button>
+            <input type="file"
+                   name="file" class="pure-file">
+                </div>
+                <br>
+                <br>
+            <button type="submit" class="pure-button pure-button-primary" >Slice!</button>
+            </fieldset>
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>

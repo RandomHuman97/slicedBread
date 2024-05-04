@@ -1,0 +1,5 @@
+exports
+*.gcode
+prusa-slicer.AppImage
+.venv
+.idea
