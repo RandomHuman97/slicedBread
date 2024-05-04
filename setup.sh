@@ -14,7 +14,7 @@ chmod +x prusa-slicer.AppImage
 
 
 
-cat > EDITME.py <<- "EOF"
+cat > EDITME.py << EOF
 EXPORT_PATH = '/home/$USER/printer_data/gcodes'
 EOF
 
