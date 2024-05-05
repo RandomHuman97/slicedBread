@@ -17,14 +17,26 @@
         </div>
         <br>
     <div class="pure-u-1-1 center">
-        <form method="POST" action="/upload" enctype="multipart/form-data" class="pure-form pure-form-stacked">
+        <form method="POST" action="/upload" enctype="multipart/form-data" class="pure-form pure-form-stacked ">
             <fieldset>
-                <legend><i>Upload an .stl file to slice.</i></legend>
+
+                <legend><i>Upload a .stl file to slice.</i></legend>
+                <label for="file"><i>Select your file</i></label>
                 <input type="file"
-                   name="file">
+                   name="file" id="file">
                 <br>
-                <br>
+                <label for="Config"><i>Select your config</i></label>
+                <select name="Config" id="Config">
+                   {% for i in configs %}
+                    <option value="{{i}}" SELECTED>{{i}}</option>
+                    {% endfor %}
+                </select>
+
+                    <br>
+                    <br>
+
                 <button type="submit" class="pure-button pure-button-primary" >Slice!</button>
+
             </fieldset>
         </form>
     </div>
